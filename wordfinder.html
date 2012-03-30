@@ -1,0 +1,52 @@
+<head>
+  <title>Draw Something Helper</title>
+  <meta name="author" content="Gordon Gao" />
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <link type="text/css" rel="stylesheet" href="./stylesheets/main.css" />
+  <script type="text/javascript" src="./scripts/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="./scripts/main.js"></script>
+  <script type="text/javascript" src="./scripts/format.js"></script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1677516-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<html>
+  <body>
+    <div id="wrap">
+      <div id="language-bar"><span id="english-selector" class="language-selector" onclick="switchLanguage('eng')">ENG</span> | <span id="chinese-selector" class="language-selector" onclick="switchLanguage('chs')">中文</span></div>
+      <p><h3><span id="txt_title">Welcome to Draw Something helper!</span></h3></p>
+      <p><span id="txt_instruction">Input the candidate letters and length of the answer, we'll find the words for you.</span></p>
+      <span id="txt_letter">Given Letters (max 12)</span><br />
+    	<div><input type="text" id="letters" maxlength="12"/></div>
+      <br />
+      <span id="txt_length">Word Length</span><br />
+      <div><select id="wordlength">
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected="selected">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select></div>
+      <br />
+      <div><button type="button" onClick="wordfinder()"><span id="txt_guess">Guess</span></button></div>
+      <div id="result"></div>
+      <div id="footer">
+        <div>
+          <span id="txt_counter">Total Guess Count:</span> <span id="counter">{{ count }}</span>
+        </div>
+        written by <a href="http://weibo.com/ghprince">Gordon</a><br />
+        datebase updated: 2012/03/26 (2000 words)
+      </div>
+    </div>
+  </body>
+</html>

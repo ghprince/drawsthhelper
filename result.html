@@ -1,0 +1,9 @@
+<table id="result_table">
+{% for i in result.items %}
+  <tr>
+  	<td class="word_eng">{{ i.0 }}</td>
+  	<td class="word_chs">{{ i.1 }}</td>
+  </tr>
+{% endfor %}
+</table>
+<span id="result_counter">{{ count }}</span>
