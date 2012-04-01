@@ -1,16 +1,23 @@
 body 
 {
-	width: 480;
+	width: 480px;
 	margin: auto;
 	text-align: center;
 	font-family: Arial, Helvetica, sans-seirf;
-	background-color: #ddd;
+	background: none #ddd;
 }
 
 #language-bar
 {
 	font-size: 11pt;
 	float: right;
+}
+
+#share-button
+{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
 }
 
 .language-selector:hover
@@ -24,7 +31,7 @@ body
 	width: 400px;
 	height: auto;
 	margin: 20px auto;
-	background-color: #eee;
+	background: none #eee;
 	padding: 10px 10px 20px 10px;
 	-webkit-box-shadow: 0 0 5px rgba(0,0,0,.1);
 	-moz-box-shadow: 0 0 5px rgba(0,0,0,.1);
@@ -37,7 +44,7 @@ body
 #result{
 	width: 300px;
 	margin: 20px auto;
-	background-color: #fff;
+	background: none #fff;
 	-webkit-box-shadow: 0 0 5px rgba(0,0,0,.1);
 	-moz-box-shadow: 0 0 5px rgba(0,0,0,.1);
 	box-shadow: 0 0 5px rgba(0,0,0,.1);
@@ -63,4 +70,5 @@ body
 {
 	padding-top: 10px;
 	font-size: 11pt;
+	position: relative;
 }
