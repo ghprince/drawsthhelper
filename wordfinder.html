@@ -23,12 +23,12 @@
   <body>
     <div id="wrap">
       <div id="language-bar"><span id="english-selector" class="language-selector" onclick="switchLanguage('eng')">ENG</span> | <span id="chinese-selector" class="language-selector" onclick="switchLanguage('chs')">中文</span></div>
-      <p><h3><span id="txt_title">Welcome to Draw Sth. helper!</span></h3></p>
-      <p><span id="txt_instruction">Input the candidate letters and length of the answer, we'll find the words for you.</span></p>
-      <span id="txt_letter">Given Letters (max 12)</span><br />
+      <p><span id="txt_title" class="title">Welcome to Draw Sth. helper!</span></p>
+      <p><span id="txt_instruction" class="instruction">Input the candidate letters and length of the answer, we'll find the words for you.</span></p>
+      <span id="txt_letter" class="instruction">Given Letters (max 12)</span><br />
     	<div><input type="text" id="letters" maxlength="12"/></div>
       <br />
-      <span id="txt_length">Word Length</span><br />
+      <span id="txt_length" class="instruction">Word Length</span><br />
       <div><select id="wordlength">
         <option value="2">2</option>
         <option value="3">3</option>
@@ -39,12 +39,12 @@
         <option value="8">8</option>
       </select></div>
       <br />
-      <div><button type="button" onClick="wordfinder()"><span id="txt_guess">Guess</span></button></div>
+      <div><button type="button" id="guess-button" onClick="wordfinder()"></button></div>
+      <div class="counter">
+        <span id="txt_counter">Total Guess Count:</span><span id="counter">{{ count }}</span>
+      </div>
       <div id="result"></div>
       <div id="footer">
-        <div>
-          <span id="txt_counter">Total Guess Count:</span> <span id="counter">{{ count }}</span>
-        </div>
         written by <a href="http://weibo.com/ghprince">Gordon</a><br />
         datebase updated: 2012/03/26 (2000 words)
         <div id="share-button">

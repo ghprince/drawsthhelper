@@ -1,16 +1,53 @@
 body 
 {
-	width: 480px;
+	width: 400px;
 	margin: auto;
-	text-align: center;
-	font-family: Arial, Helvetica, sans-seirf;
+	text-align: left;
+	font-family: Verdana, "微软雅黑", Helvetica, sans-seirf;
 	background: none #ddd;
+}
+
+.title
+{
+	font-size: 15pt;
+	font-weight: bold;
+}
+
+.instruction
+{
+	font-size: 10pt;
+	color: rgba(135,135,135,1);
+}
+
+.counter
+{
+	font-size: 10pt;
 }
 
 #language-bar
 {
-	font-size: 11pt;
+	font-size: 10pt;
 	float: right;
+}
+
+#guess-button
+{
+	display:block;
+	background:url(../images/button_normal.png);
+	width: 231px;
+	height: 48px;
+	border: 0px;
+}
+
+#guess-button:hover
+{
+	background:url(../images/button_focus.png);
+	cursor:pointer;
+}
+
+#guess-button:active
+{
+	background:url(../images/button_push.png);
 }
 
 #share-button
@@ -28,11 +65,11 @@ body
 
 #wrap 
 {
-	width: 400px;
+	width: 360px;
 	height: auto;
 	margin: 20px auto;
 	background: none #eee;
-	padding: 10px 10px 20px 10px;
+	padding: 30px 30px 30px 30px;
 	-webkit-box-shadow: 0 0 5px rgba(0,0,0,.1);
 	-moz-box-shadow: 0 0 5px rgba(0,0,0,.1);
 	box-shadow: 0 0 5px rgba(0,0,0,.1);
@@ -43,7 +80,7 @@ body
 
 #result{
 	width: 300px;
-	margin: 20px auto;
+	margin: 20px;
 	background: none #fff;
 	-webkit-box-shadow: 0 0 5px rgba(0,0,0,.1);
 	-moz-box-shadow: 0 0 5px rgba(0,0,0,.1);
@@ -51,6 +88,7 @@ body
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
+	text-align: center;
 	/*display:none;*/
 }
 
@@ -69,6 +107,7 @@ body
 #footer
 {
 	padding-top: 10px;
-	font-size: 11pt;
+	font-size: 8pt;
+	color: rgba(135,135,135,1);
 	position: relative;
 }
