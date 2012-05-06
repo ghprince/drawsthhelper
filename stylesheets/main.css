@@ -33,7 +33,7 @@ body
 #guess-button
 {
 	display:block;
-	background:url(../images/button_normal.png);
+	background:url(../images/button_all.png);
 	width: 231px;
 	height: 48px;
 	border: 0px;
@@ -41,13 +41,13 @@ body
 
 #guess-button:hover
 {
-	background:url(../images/button_focus.png);
+	background-position:0px -48px;
 	cursor:pointer;
 }
 
 #guess-button:active
 {
-	background:url(../images/button_push.png);
+	background-position:0px -96px;
 }
 
 #share-button
