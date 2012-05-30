@@ -57,17 +57,6 @@ class MainHandler(webapp.RequestHandler):
         path = os.path.join(os.path.dirname(__file__), 'wordfinder.html')
         self.response.out.write(template.render(path, template_values))
 
-class TranslateHandler(webapp.RequestHandler):
-    def get(self):
-        word = self.request.get('word')
-        try:
-            wordchs = urllib2.urlopen("http://api.microsofttranslator.com/V2/Ajax.svc/Translate?appId=0CC837D785CF5B5B63EBDF3B68CFDB2A59F5B60F&from=en&to=zh-cn&text="+word).read()
-        except:
-            wordchs = word+"(翻译不给力!)".decode('utf-8')
-        if wordchs.find("Exception") >= 0:
-            wordchs = word+"(翻译不给力!)".decode('utf-8')
-        self.response.out.write(wordchs.replace('"',''))
-
 class GuessHandler(webapp.RequestHandler):
     def post(self):
         increment()
@@ -96,6 +85,5 @@ class GuessHandler(webapp.RequestHandler):
         self.response.out.write(template.render(path, template_values))
 
 app = webapp.WSGIApplication([('/', MainHandler),
-                                ('/translate', TranslateHandler),
                                 ('/guess', GuessHandler)],
                                          debug=True)
