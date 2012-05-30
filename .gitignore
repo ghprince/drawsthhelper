@@ -6,3 +6,4 @@
 psd
 config.py
 app.yaml
+.idea*
