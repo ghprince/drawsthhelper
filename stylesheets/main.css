@@ -3,7 +3,7 @@ body
 	width: 400px;
 	margin: auto;
 	text-align: left;
-	font-family: Verdana, "微软雅黑", Helvetica, sans-seirf;
+	font-family: Verdana, "微软雅黑", Helvetica, sans-serif;
 	background: none #ddd;
 }
 
@@ -36,25 +36,25 @@ body
 	background:url(../images/button_all.png);
 	width: 231px;
 	height: 48px;
-	border: 0px;
+	border: 0;
 }
 
 #guess-button:hover
 {
-	background-position:0px -48px;
+	background-position:0 -48px;
 	cursor:pointer;
 }
 
 #guess-button:active
 {
-	background-position:0px -96px;
+	background-position:0 -96px;
 }
 
 #share-button
 {
 	position: absolute;
-	right: 0px;
-	bottom: 0px;
+	right: 0;
+	bottom: 0;
 }
 
 .language-selector:hover

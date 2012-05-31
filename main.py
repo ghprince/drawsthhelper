@@ -16,7 +16,6 @@
 # limitations under the License.
 #
 import os
-import urllib2
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp import template
 from google.appengine.ext import db
@@ -66,6 +65,7 @@ class GuessHandler(webapp.RequestHandler):
 
         for x in wordlist[length]:
             remaining_letters = letters
+            match = 0
             for y in x:
                 match = 1
                 if remaining_letters.find(y) >= 0:
